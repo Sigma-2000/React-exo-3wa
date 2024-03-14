@@ -12,12 +12,12 @@ export const usePostContext = () => {
   const { value } = useContext(PostContext);
   return value; 
 }
-
+//consumer peut étre mid dans le provider en faite et passer state et dispatch direct voir openOF et corr
 const PostContextProvider = ({ children }) => {
   const value = postConsumer();
 
   return (
-    <PostContext.Provider value={{ value}}>
+    <PostContext.Provider value={{value}}>
       {children}
     </PostContext.Provider>
   );
